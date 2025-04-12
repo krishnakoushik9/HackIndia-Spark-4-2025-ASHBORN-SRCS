@@ -1,0 +1,10 @@
+fastapi==0.108.0
+uvicorn==0.25.0
+langchain==0.1.1
+langchain-community==0.0.16
+pymupdf==1.23.8
+python-docx==1.0.1
+python-pptx==0.6.22
+faiss-cpu==1.7.4
+pydantic==2.5.3
+unstructured[all-docs]==0.12.6  # modern parser replacing textract

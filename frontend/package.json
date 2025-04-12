@@ -1,0 +1,55 @@
+{
+  "name": "ai-document-assistant",
+  "productName": "ASHBORN AI",
+  "version": "1.0.0",
+  "description": "Privacy-friendly document search and retrieval",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "ASHBORN - SRCS",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.4",
+    "electron-store": "^8.1.0"
+  },
+  "build": {
+    "appId": "com.hackathon.ai-document-assistant",
+    "productName": "ASHBORN AI",
+    "copyright": "Copyright © 2025 ASHBORN - SRCS",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend/dist",
+        "to": "backend",
+        "filter": ["**/*"]
+      }
+    ],
+    "linux": {
+      "target": "AppImage",
+      "category": "Office",
+      "icon": "icon.ico"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.productivity",
+      "icon": "icon.png"
+    }
+  }
+}
